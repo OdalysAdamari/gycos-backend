@@ -15,17 +15,17 @@
     "Name": {
       "type": "string"
     },
-    "service_type": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::service-type.service-type",
-      "inversedBy": "service_categories"
-    },
     "services": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::service.service",
       "mappedBy": "service_category"
+    },
+    "service_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::service-type.service-type",
+      "inversedBy": "service_categories"
     }
   }
 }
